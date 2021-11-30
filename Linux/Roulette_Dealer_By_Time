@@ -1,0 +1,6 @@
+#!/bin/bash 
+#usage ./roulette_dealer_finder_by_time.sh <date> <time> <am/pm>
+#output Current Roulette Dealer
+cat $1_Dealer_schedule|grep $2|grep $3|
+awk -F" " '{print ($5), ($6)}'
+
